@@ -51,7 +51,7 @@ li {
   font-size: 20px;
   color: #7342d6;
   font-weight: bold;
-  padding: px;
+  padding: 8%;
 }
 
 .nav__link:hover {
@@ -72,6 +72,7 @@ li {
 }
 
 header {
+  height: calc(100vh-80px);
 }
 
 .header__container {
@@ -160,28 +161,14 @@ HIGHLIGHTS
 }
 
 #highlights:before {
-  /* background: url(assets/wave.svg);
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 0;
   transform: translateY(-100%);
-  width: 101vw;
-  height: 12vw;
-  background-size: cover;
+  top: 5px;
+}
+
+#highlights:after {
   background-repeat: no-repeat;
-  z-index: 1; */
-}
-
-#highlights:before {
-  transform: translateY(-100%);
-  top: 1px;
-}
-
-#highlights:after{
-background-repeat: no-repeat;
-  transform: translateY(1%) rotate(180deg);
-  bottom: -125px;
+  transform: translateY(100%) rotate(180deg);
+  bottom: 5%;
 }
 
 .highlight__wrapper {
@@ -199,14 +186,14 @@ background-repeat: no-repeat;
 
 .highlight__para {
   text-align: center;
-  max-width: 280;
+  max-width: 280px;
 }
 
 .highlight__img {
   border: 2px solid #7342d65d;
   color: #7342d6;
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,6 +205,10 @@ background-repeat: no-repeat;
 .highlight__subtitle {
   font-size: 20px;
   margin-bottom: 16px;
+}
+
+.container {
+  padding: 56px 0;
 }
 
 /*
@@ -232,14 +223,48 @@ FEATURES
 }
 
 .books {
-display: flex;
+  display: flex;
 }
 
 .book {
   width: 25%;
-padding: 24px;
+  padding: 24px;
 }
 
 .book__img {
   max-height: 380px;
+  transition: all 300ms ease;
+  cursor: not-allowed;
+}
+
+.book__img--wrapper {
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+
+.book:hover .book__img {
+  transform: scale(1.03);
+}
+
+.book__title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.book__title:hover {
+  text-decoration: underline;
+  cursor: not-allowed;
+}
+
+.book__ratings {
+  margin-bottom: 8px;
+  color: #fabf2a;
+}
+
+.book__price--normal {
+  text-decoration: line-through;
+  padding-right: 6px;
+  color: #bfbfbf;
 }
